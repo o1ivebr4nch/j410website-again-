@@ -1,0 +1,350 @@
+<!doctype html>
+
+<html>
+<meta charset="UTF-8">
+
+    <link rel="stylesheet" href="styles.css">
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+ 
+    
+    <!--The following meta tag contains the site’s description -->
+<meta name="description" content="Vinyl News, vinyl record collecting, analogue, and anything vinyl related. For vinyl heads and any tips for collecting vinyl." />
+    
+    <!--The following meta tag contains the site’s keywords -->
+<meta name="keywords" content="vinyl player, analogue music, vinyl trends, vinyl record collecting, turntables, analog sound quality , vinyl record care, vintage vinyl, record player, vinyl collecting" />
+
+
+
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Project Analogue | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar which disappears on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon - images are in a folder called 'fav'-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img\project analogue logo (1).png" width="65" height="60" alt=""/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+	   <li>
+          <a href="#gal">Boo Boo's Records</a>
+		  </li>
+	  	<li>
+          <a href="#tl">Student Stories</a>
+        </li>
+        <li>
+          <a href="#vid">Navigation</a>
+			</li>
+      <li>
+          <a href="#num">Vinyl Data</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container">
+</div>
+<!--animated welcome-->
+    <div class="wrapper">
+    <!--animated welcome code here-->
+
+      
+
+
+
+<!--beginning of main content area-->
+<div class="row whiteBG">
+<h2 id="home">Heading</h2>
+<article>
+<p class="tab">Blurb 1<br><br>Blurb 2</p>
+<p class="tab"><a href="#gal">Navigation</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+<h2 id="gal">Heading</h2>
+<article><!--beginning of article-->
+<p class="tab">Blurb</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img\1.jpg" width="100%" height="100%" alt="Vinyl in the past few years has gained mass appeal. Malik Thorne, an employee for Boo Boo's Records for over 20 years, says how there is no real reason for the trend. On March 15, Thorne brings up Record Store Day and how that has always had a lasting appeal to vinyl regarding the loca; San Luis Obispo community. 
+"/>
+<img src="img\2.jpg" width="100%" height="100%" alt="Miguel Samson, an online consultant, has been working for Boo Boo's for 16 years. He sorts through stacks of vinyl, deciding where they go and whether or not they are put on display. Vinyl is a tangible artform, Samson said. 
+"/>
+<img src="img\3.jpg" width="100%" height="100%" alt="Vinyl is a timeless piece of art. Not only is their shelf-life significantly much more than CDs but each vinyl is a time capsule. Thorne said, We have vinyl in here from the 2020's and we have vinyl from the 60's. 
+"/>
+<img src="img\4.jpg" width="100%" height="100%" alt="While streaming services dominate the music industry, vinyl presents a more intimate view of the music. The ability to view the artists, songs, and the production that went into the music. Thorne says it's the same thing for people on streaming services. People who Google the song that they're listening to are engaging with the music in a certain way, Thorne said.
+"/>
+<img src="img\5.jpg" width="100%" height="100%" alt="Vinyl also has its disadvantages, it being a tangible medium means that things such as dust can collect and ruin the quality of the sound. A bad pressing can also mean the vinyl is warped, has scratches or any imperfections. Yet, even with streaming services there are still disadvantages such as compression of the sound. With vinyl as Thorne puts it, you can get a truer reproduction.
+"/>
+<img src="img\6.jpg" width="100%" height="100%" alt="Vinyl offers a nostalgic aspect as well to the listener. There is something visually appealing about playing a record that a CD does not have. Thorne relates the use of a vinyl player to smoking and says how both are seen as cool. As well as the ability to share this connection with one another. The older generations can appreciate music such as Fleetwood Mac who the younger generations can appreciate as well. That sound has just kind of imprinted on you forever, Thorne said. 
+"/>
+<img src="img\7.jpg" width="100%" height="100%" alt="Vinyl is one of the many ways to digest music. Vinyl has a lot of appealing elements yet, at the end of the day as Thorne puts it, It's about the music.
+"/>
+
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">Navigation</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">Heading</h2>
+<article>
+  <p class="tab">Click on images to hear ...<br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio/1.aidon.mp3">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio/2.riley.mp3">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>        
+
+        
+<img src="img/rollover/aidan_dillongif.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/1.jpg'" onMouseOut="this.src='img/rollover/aidan_dillongif.gif'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/2.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.jpg'" onMouseOut="this.src='img/rollover/2.gif'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+
+	</div>
+</div>
+<p class="tab"><a href="#vid">Navigation</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+<!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.jpg">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">Heading</h2>
+<article>
+<p class="tab">Blurb</p>	
+<video width="100%" height="100%" poster="img/poster.jpg" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">Navigation</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of infographic section-->
+<div class="row">
+
+<h1 id="tba">Vinyl Data</h1>
+
+<article>
+
+<p class="tab">Vinyl Sales</p>
+
+<script id="infogram_0_550f3ec3-83f4-4aa5-a9a2-d4f64c3cc1f0" title="Step by Step" src="https://e.infogram.com/js/dist/embed.js?lWe" type="text/javascript"></script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/550f3ec3-83f4-4aa5-a9a2-d4f64c3cc1f0" style="color:#989898!important;text-decoration:none!important;" target="_blank">Step by Step</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+
+</article>
+
+</div>
+    <div class="row whiteBG">
+    
+<h2 id="num">Heading</h2>
+<article>
+<p class="tab"></p>
+<!--infographic embed code here-->
+</article>
+</div>
+<!--end of infographic section-->
+	
+<!--beginning of footer-->
+<footer>Site Name Here | San Luis Obispo, CA | <a href="mailto: email@email.com?Subject=Inquiry" target="_top">Send Email</a> | Copyright 20__ | Site by You 
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+
+
+
+</html>
